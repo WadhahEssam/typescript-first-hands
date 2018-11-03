@@ -41,12 +41,35 @@ console.log(colorVar);
 // you with integrating javascript code and libraries into
 // your projects
 var notSure = 4;
-// Object 
-// if you want to give a variable any value and you are not 
-// sure what is it yet, but at the same time you don't want 
-// this variable to change its value in the future you can 
-// define it as an Object which i think it i a weird name
-var prettySure = 4;
-console.log(prettySure);
-prettySure = '10.3';
-console.log(prettySure);
+// giving the return type of a function, and you can use 
+// all the above types + the type void if you are returning
+// nothing 
+function warnUser() {
+    console.log("this is a warning message");
+}
+// undefined and null
+// for some reason undefined and null has their own types
+// and you can assign their value to other values cuz as 
+// they say ( are subtypes of all other types ) 
+var u = undefined;
+var n = null;
+// in case if you are not sure if you want to pass a type 
+// or undefined or null then you can use the union type 
+var hello = 'hello';
+var hello2 = 2; // btw this worked without the union operator 
+console.log(hello);
+console.log(hello2);
+// Never
+// there is a function type called never, and this is 
+// used where the function is not expected to return anything 
+// maybe cuz of an infinite loop or cuz of throwing error or any
+// other possiable reaon .
+function infLoop() {
+    while (true) {
+    }
+}
+create({ prop: 0 });
+create(null);
+create(42); // this will return error
+create('string'); // this will return error too 
+create(undefined); // this should return error to 
